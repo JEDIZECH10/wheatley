@@ -1,25 +1,14 @@
 {
-    "name": "Wheatley AI Developer Environment",
+    "name": "Free Wheatley AI",
     "image": "://mcr.microsoft.com",
-    
     "features": {
         "ghcr.io/devcontainers/features/github-cli:1": {}
     },
-
     "customizations": {
         "vscode": {
-            "extensions": [
-                "ms-python.python",
-                "rangav.vscode-thunder-client"
-            ]
+            "extensions": ["ms-python.python"]
         }
     },
-
-    // Installs your AI libraries automatically
-    "postCreateCommand": "pip install --user -r requirements.txt",
-
-    // This allows your Windows 11 script to send voice data to port 8000
-    "forwardPorts": [8000],
-
-    "remoteUser": "vscode"
+    "postCreateCommand": "curl -fsSL https://ollama.com | sh && ollama serve > ollama.log 2>&1 & sleep 5 && ollama pull llama3.2:1b",
+    "forwardPorts": [11434]
 }

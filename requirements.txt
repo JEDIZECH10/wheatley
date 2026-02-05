@@ -1,5 +1,2 @@
-openai
-elevenlabs
-sounddevice
-speechrecognition
-python-dotenv
+flask
+requests
