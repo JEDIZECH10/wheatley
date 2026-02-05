@@ -1,0 +1,5 @@
+openai
+elevenlabs
+sounddevice
+speechrecognition
+python-dotenv
