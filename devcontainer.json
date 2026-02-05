@@ -1,0 +1,25 @@
+{
+    "name": "Wheatley AI Developer Environment",
+    "image": "://mcr.microsoft.com",
+    
+    "features": {
+        "ghcr.io/devcontainers/features/github-cli:1": {}
+    },
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "rangav.vscode-thunder-client"
+            ]
+        }
+    },
+
+    // Installs your AI libraries automatically
+    "postCreateCommand": "pip install --user -r requirements.txt",
+
+    // This allows your Windows 11 script to send voice data to port 8000
+    "forwardPorts": [8000],
+
+    "remoteUser": "vscode"
+}
